@@ -2,6 +2,9 @@
 print('This is a Guessing Game')
 print("Ready to play?")
 
+
+#if the user guess is equal to the number, the user is a winner
+#there are two users who are competing
 number_2_guess = 7
 print(number_2_guess)
 user_guess= 5
@@ -13,4 +16,4 @@ if number_2_guess == user_guess:
 elif number_2_guess == user2_guess:
     print("Good guess guest2, you are a winner!")
 else:
-    print(str(user_guess) + " is not equal to " + str(number_2_guess))
+    print(str(user_guess) + " is not equal to " + str(number_2_guess) + ". Better luck next time!")
