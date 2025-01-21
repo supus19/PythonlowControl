@@ -17,5 +17,10 @@ if number_2_guess == int(user_guess):
     print("Good guess guest1, you are a winner")
 elif number_2_guess == int(user2_guess):
     print("Good guess guest2, you are a winner!")
+
+elif number_2_guess+1 == int(user_guess) or number_2_guess-1 == int(user_guess):
+    print("Close but no cigar. Guest 1")
+elif number_2_guess+1 == int(user2_guess) or number_2_guess-1 == int(user2_guess):
+    print("Close but no cigar. Guest 2")   
 else:
     print(str(user_guess) + " or " + str(user2_guess) + " are not equal to " + str(number_2_guess) + ". Better luck next time!")
