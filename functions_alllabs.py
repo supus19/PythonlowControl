@@ -228,6 +228,26 @@ def get_number(prompt):
         except ValueError:
             print("Invalid Input. Please enter valid number")
 
+print("Lab 8")
+
+# Function to return greetings in different languages
+def greet(lang):
+    if lang == 'es':
+        return 'Hola'
+    elif lang == 'fr':
+        return 'Bonjour'
+    elif lang == 'sw':
+        return 'Habari'  # Swahili
+    elif lang == 'uk':
+        return 'Привіт'  # Ukrainian (Pryvit)
+    elif lang == 'elv':
+        return 'Mae govannen'  # Middle Earth Elven (Sindarin)
+    elif lang == 'tlh':
+        return 'nuqneH'  # Klingon (means "What do you want?")
+    else:
+        return 'Hello'
+
+
 
 def main():
       num1 = 5
@@ -250,5 +270,21 @@ def main():
 
       result = my_math(mynum1, mynum2, operation)
       print(result)
+
+      print(greet('en'), 'Glenn')
+      print(greet('fr'), 'Sabine')
+      print(greet('es'), 'Carlos')
+      print(greet('sw'), 'Amina')
+      print(greet('uk'), 'Andriy')
+      print(greet('elv'), 'Legolas')
+      print(greet('tlh'), 'Worf')
+
+      name = input("\nWhat is your name? ")
+    
+      print("\nAvailable languages: English (en), Spanish (es), French (fr), Swahili (sw), Ukrainian (uk), Elven (elv), Klingon (tlh)")
+      language = input("Choose your language code: ").strip().lower()
+
+      print(f"{greet(language)}, {name}!")
+
 
 main()
