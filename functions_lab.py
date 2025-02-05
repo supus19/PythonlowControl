@@ -1,3 +1,19 @@
+print('Playing with Builtin Python Functions')
+student_name = "Saaketh Shanbhogue"
+program_creation_date = "02/05/2025"
+print(student_name)
+print(program_creation_date)
+
+print('''This Lab is about using Python Builtin Functions. Try and show code using the following functions, then pick 4 more to try. ...
+- print()
+- input('enter something here: ')
+- int()
+- type()
+- abs()
+- len()
+
+My code follows:''')
+
 print('Using the function int() & type() & id()')
 user_input = input('enter a number > ')
 print(user_input)
@@ -7,6 +23,7 @@ print(ord(user_input))
 user_input = int(user_input)
 print(type(user_input))
 print('the id() of user_input as a int', id( user_input))
+print(len(student_name))
 
 def print_lyrics():
   print("Tonight you're falling in love")
@@ -41,4 +58,6 @@ def main() :
     print(greet('es'),'Carlos')
   
 main()
+
+
 
