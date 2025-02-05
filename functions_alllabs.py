@@ -159,3 +159,96 @@ number = 100
 print("String representation of 100:", str(number))  # Output: '100'
 
 # print('Done with Challenge 1')
+
+print("Lab 5")
+
+# Using the ord() function to find the hex value of the 'Ω' symbol
+ohm_symbol = 'Ω'
+hex_value = hex(ord(ohm_symbol))  # Convert to hexadecimal
+
+print(f"The hex value of 'Ω' is: {hex_value}")  # Output: 0x3a9
+
+# Ohm's Law: R = V / I
+# Given: Voltage (V) = 5V, Current (I) = 20mA (0.020A)
+
+volts = 5
+current = 0.020  # 20mA converted to Amperes
+resistance = volts / current  # R = V / I
+
+# Using chr() to print the Ω symbol
+print(f"A circuit with a voltage of {volts}V and a current of {current * 1000}mA will require a resistor of {resistance}{chr(937)}")
+
+# Asking the user for voltage and current to dynamically calculate resistance
+volts = float(input("Enter voltage (V): "))
+current = float(input("Enter current (mA): ")) / 1000  # Convert mA to A
+resistance = volts / current
+
+# Displaying the result with the Ω symbol
+print(f"A circuit with a voltage of {volts}V and a current of {current * 1000}mA will require a resistor of {resistance}{chr(937)}")
+
+print("lab 6")
+
+def multiply(x, y):
+    return x*y
+
+def sum(x, y):
+     add = x+y
+     if (add//2 != 0):
+      add+=1
+      return add
+     
+
+print("lab 7")
+
+# Function to perform mathematical operations
+def my_math(x, y, operation="Addition"):
+    if operation == "Addition":
+        result = x + y
+        symbol = "+"
+    elif operation == "Subtraction":
+        result = x - y
+        symbol = "-"
+    elif operation == "Multiplication":
+        result = x * y
+        symbol = "*"
+    elif operation == "Division":
+        if y == 0:  # Handling division by zero
+            return "Error: Division by zero is not allowed."
+        result = x / y
+        symbol = "/"
+    else:
+        return "Error: Invalid operation."
+
+    return f"The result of {x} {symbol} {y} = {result}"
+
+def get_number(prompt):
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print("Invalid Input. Please enter valid number")
+
+
+def main():
+      num1 = 5
+      num2 = 10
+      multiplication = multiply(num1, num2)
+      print(multiplication)
+      summation = sum(num1, num2)
+      print(summation)
+
+      mynum1 = get_number("Enter the first number: ")
+      mynum2 = get_number("Enter the second number: ")
+
+      operations = ["Addition", "Subtraction","Multiplication", "Division"]
+      print("Choose an operations: ", ", ".join(operations))
+      while True:
+          operation = input("Enter the operation: ").strip().capitalize()
+          if operation in operations:
+              break
+          print("Invalid Operation. Try again")
+
+      result = my_math(mynum1, mynum2, operation)
+      print(result)
+
+main()
