@@ -51,26 +51,17 @@ def stop_light(traffic_light_):
 #Asks the user for input of color and the value
 #based on the input, checks to see if color is in the dictionary, and then turns on the led the user wants
 def update(traffic):
-    color = input("Enter your color: ").lower()
-    if color in traffic:
-        value = int(input("enter a number from 0 to 1: "))
-        traffic[color]=value
+    it = iter(traffic)
+    red = next(it)
+    yellow = next(it)
+    green = next(it)
+    red_val=int(input("Turn on red? ENTER 0 or 1: "))
+    yellow_val=int(input("Turn on yellow? ENTER 0 or 1: "))
+    green_val=int(input("Turn on green? ENTER 0 or 1: "))
+
+    traffic[red]=red_val
+    traffic[yellow]=yellow_val
+    traffic[green]=green_val
            
    
 def main():
-    print("Welcome To The STEAM Clown Makey Bot")
-#     while(True):
-#         print("LED on")
-#         red_led.on()
-#         time.sleep(1)
-#         print("LED off")
-#         red_led.off()
-#         time.sleep(1)
-    traffic_light = {"red":0,"yellow":0,"green":0}
-    update(traffic_light)
-
-    stop_light(traffic_light)
-   
-       
-   
-main() 
