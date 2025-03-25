@@ -37,6 +37,36 @@ def wave():
     servo.min()
     sleep(wave_delay)
 
+def test_hardware():
+    red_pwm_pin.value = 0.5
+    green_pwm_pin.value = 0.5
+    blue_pwm_pin.value = 0.5
+    sleep(2)
+    red_pwm_pin.value = 0
+    green_pwm_pin.value = 0
+    blue_pwm_pin.value = 0
+
+    red_led.on()
+    sleep(1)
+    red_led.off()
+    sleep(1)
+    yellow_led.on()
+    sleep(1)
+    yellow_led.off()
+    sleep(1)
+    green_led.on()
+    sleep(1)
+    green_led.off()
+    sleep(1)
+    servo.value = 1
+    sleep(0.5)
+    servo.value = 0.5
+
+    user_input = input("Did everything work? (Y or N)").upper()
+    if (user_input == "N"):
+        raise Exception("Problem with Hardware")
+
+
 
 
 def stop_light(traffic_light):
@@ -107,6 +137,7 @@ def get_robot_feature_data():
 
 def main():
     print("Welcome To The STEAM Clown Makey Bot")
+    test_hardware()
 #    robot_features = get_robot_feature_data()
     stop_light_LEDs, eyes_rgb = get_robot_feature_data()
 
