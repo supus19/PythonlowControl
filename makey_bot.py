@@ -110,10 +110,14 @@ def main():
 #    robot_features = get_robot_feature_data()
     stop_light_LEDs, eyes_rgb = get_robot_feature_data()
 
+    print("Calling the stoplight function")
 
     stop_light(stop_light_LEDs)
 
+    print("calling the rgb function")
     eyes_RGB(eyes_rgb)
+
+    print("calling the servo function")
     wave()
 
 main()
