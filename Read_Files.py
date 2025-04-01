@@ -35,6 +35,14 @@ print('''Answer to Challenge 1
 # 4) encoding='UTF-8'>
 # print('The parts of a file handle are:')
 # -----------------------------
+
+print("The parts of a file handle are: ")
+print('''
+_io.TextIOWrapper: Type of object returned by open() function when you open file in text mode. 
+names='text-file-matrix.txt': Specifies name of file you want to work it.
+mode = "r": file is opened in read mode. Only read the file.
+encodings = 'UTF-8': specifies character encoding to use when reading or writing text data
+      ''')
 xfile = open('text-file-matrix.txt')
 print(xfile)
 print('''
